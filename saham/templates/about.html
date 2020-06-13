@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>My_Family</h1><br/>
+Tujuan:<br/>
+<br/>
+membantu kerabat terdekat mencari/dicari pekerjaan sesuai dengan keahlian masing2<br/>
+bisa mempermudah komunikasi diantara sesama keluarga<br/>
+bisa mengetahui dimana saja lokasi keluarga terdekat kita<br/>
+bisa chat dengan keluarga diinginkan<br/>
+saling membantu sesama keluarga terdekat dengan mengetahui keberadaan dan pekerjaan masing2<br/>
+bisa mencari silsilah keluarga<br/>
+Keterangan:<br/>
+<br/>
+* M = mandatory<br/>
+* O = optional<br/>
+* E = Encrypted<br/>
+* S = Show<br/>
+* H = Hide<br/>
+Data2 yang diperlu diisi masing2 orang:<br/>
+<br/>
+Nama Ayah ~ M/S<br/>
+ID Ayah ~ M/E/H<br/>
+Nama Ibu ~ M/S<br/>
+ID Ibu ~ M/E/H Data diri:<br/>
+Nama saya ~ M/S<br/>
+ID saya ~ M/E/H<br/>
+Keahlian ~ M/S ~ M/S =>category=>write manual<br/>
+Pekerjaan ~ M/S ~ M/S =>category=>write manual<br/>
+email address ~ O/E/H<br/>
+no hp ~ O/E/H<br/>
+Nama istri/suami ~ M/S => kemungkinan lebih dari satu<br/>
+ID istri ~ M/E/H Data2 anak akan diisi dibawah nama istri:<br/>
+Nama anak ~ M/S => kemungkinan lebih dari satu<br/>
+ID anak ~ M/E/H<br/>
+Setiap data yang dimasukkan akan diverifikasi/di approve oleh ayah atau orang tua masing berdasarkan ID yang dimasukkan Contoh:<br/>
+
+saya memasukkan nama ayah dan ID nya, maka ayah saya akan menerima notifikasi kalau saya benar anak ayah saya<br/>
+ada seorang perempuan update data dan mengatakan saya suaminya, maka saya akan meng "iya" kan atau "tidak" demikian juga dengan yang lainnya dengan kondisi yang sama<br/>
+Disiapkan kolom "search": "Nama/ID/Pekerjaan/Keahlian"<br/>
+<br/>
+Kalau ada ADMIN yang mengisi data2 nya maka USER_NAME akan memakai no HP dan Standard password(12345678) dan dikirimkan link nya ke no hp bersangkutan untuk install apps dan verifikasi data yang ada<br/>
+Supaya apps ini bisa sering dibuka dan dipakai, kita buatkan "CHAT" antar sesama yang terconnected atau sesama nama2 yg muncul di apps tersebut. Bisa dipakai untuk buat Pengumuman di Banjar/Kampung itu untuk keluarga yang masuk.<br/>
+<br/>
+
+{% endblock %}

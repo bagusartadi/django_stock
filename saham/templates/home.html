@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{api.companyName}}</h1>
+<br/>
+<br/>
+
+{% if ticker %}
+	{{ticker}}
+{% endif %}
+
+<h5>Points need to be reviewed:</h5>
+{% if api %}
+	{% if api == "Error..." %}
+		there was problem with your ticker symbol
+		please try again...
+
+	{% else %}
+		CompanyName = {{api.companyName}}<br/>
+		LatestPrice = ${{api.latestPrice}}<br/>
+		Close = ${{api.previousClose}}<br/>
+		MarketCap = {{api.marketCap}}<br/>
+		YTDChange = {{api.ytdChange}}%<br/>
+		Week52High = ${{api.week52High}}<br/>
+		Week52Low = ${{api.week52Low}}<br/>
+		<br/>
+
+		<h5>Details info:</h5>
+		{% for key, value in api.items %} *
+			{{key}}:{{value}}
+		{% endfor %}<br/>
+		<br/>
+
+	{% endif %}
+
+{% endif %}
+
+{% endblock %}
