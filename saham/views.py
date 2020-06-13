@@ -1,3 +1,5 @@
+#copyright (c)2020 #artadi All rights reserved
+
 #pk_5f1a794f08884efa8addfcc924e49846
 from django.shortcuts import render, redirect
 from .models import Stock
